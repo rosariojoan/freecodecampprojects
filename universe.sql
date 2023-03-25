@@ -308,14 +308,14 @@ INSERT INTO public.moon VALUES ('Leda', 'gray                ', 10, 1, 'It is ra
 INSERT INTO public.moon VALUES ('Lysithea', 'brown               ', 10, 1, 'It was discovered in 1938 and has only 18 km of radius', 'jupyter', 12);
 INSERT INTO public.moon VALUES ('Carpo', 'gray                ', 10, 1, 'It is named after the Greek mythological Carpo the goddess of autumn/fall', 'jupyter', 13);
 INSERT INTO public.moon VALUES ('Megaclite', 'gray                ', 10, 1, 'It is also known as jupyter XIX', 'jupyter', 14);
-INSERT INTO public.moon VALUES ('Lysithea', 'brown               ', 10, 1, '', 'jupyter', 15);
 INSERT INTO public.moon VALUES ('S/2003 J 2', 'gray                ', 10, 1, '', 'jupyter', 16);
 INSERT INTO public.moon VALUES ('Pasiphae', 'gray                ', 10, 1, 'It was discovered in 1908 by Philibert Melotte', 'jupyter', 17);
 INSERT INTO public.moon VALUES ('S/2019 J 2', 'gray                ', 10, 1, '', 'jupyter', 18);
 INSERT INTO public.moon VALUES ('Callirrhoe', 'gray                ', 10, 1, '', 'jupyter', 19);
 INSERT INTO public.moon VALUES ('Praxidike', 'gray                ', 10, 1, '', 'jupyter', 20);
-INSERT INTO public.moon VALUES ('Euporie', 'gray                ', 10, 1, '', 'jupyter', 21);
 INSERT INTO public.moon VALUES ('Thyone', 'gray                ', 10, 1, '', 'jupyter', 22);
+INSERT INTO public.moon VALUES ('Euporie', 'brown               ', 10, 1, '', 'jupyter', 15);
+INSERT INTO public.moon VALUES ('Enanke', 'gray                ', 10, 1, '', 'jupyter', 21);
 
 
 --
@@ -414,6 +414,14 @@ ALTER TABLE ONLY public.glue
 
 ALTER TABLE ONLY public.glue
     ADD CONSTRAINT glue_pkey PRIMARY KEY (glue_id);
+
+
+--
+-- Name: moon moon_name_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.moon
+    ADD CONSTRAINT moon_name_key UNIQUE (name);
 
 
 --
